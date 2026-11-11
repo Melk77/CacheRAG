@@ -125,10 +125,7 @@ function App() {
   );
 
   useEffect(() => {
-    localStorage.setItem(
-      "cacherag-web-search",
-      String(webSearchEnabled),
-    );
+    localStorage.setItem("cacherag-web-search", String(webSearchEnabled));
   }, [webSearchEnabled]);
 
   const [collections, setCollections] = useState([]);
@@ -1456,14 +1453,18 @@ function App() {
                             <td>
                               <span
                                 className={`status-pill ${
-                                  request.cache_status === "hit"
+                                  ["hit", "semantic_hit"].includes(
+                                    request.cache_status,
+                                  )
                                     ? "success"
                                     : "neutral"
                                 }`}
                               >
-                                {request.cache_status === "hit"
-                                  ? "Hit"
-                                  : "Miss"}
+                                {request.cache_status === "semantic_hit"
+                                  ? "Semantic Hit"
+                                  : request.cache_status === "hit"
+                                    ? "Hit"
+                                    : "Miss"}
                               </span>
                             </td>
 

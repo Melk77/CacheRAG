@@ -74,13 +74,15 @@ def ask_question(
 
         db.add(metric)
         db.commit()
-
+    
     except Exception:
+        logging.exception("Failed to save performance metrics")
         db.rollback()
+        
         raise HTTPException(
             status_code=500,
             detail="Answer generated, but performance metrics could not be saved.",
-        )
+            )
 
     # 5. Return the answer and its sources.
     return result

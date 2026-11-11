@@ -37,7 +37,7 @@ class RequestMetric(Base):
     )
 
     cache_status: Mapped[str] = mapped_column(
-        String(10),
+        String(20),
         nullable=False,
     )
 
