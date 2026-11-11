@@ -1,0 +1,3 @@
+CacheRAG is a Redis-powered Retrieval-Augmented Generation knowledge assistant.
+It allows users to upload documents and ask questions about their content.
+The system uses PostgreSQL, Redis, Qdrant, and Gemini.

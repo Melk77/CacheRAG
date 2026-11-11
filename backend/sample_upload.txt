@@ -1,0 +1,6 @@
+﻿CacheRAG TXT Upload Test
+
+Redis is an in-memory data store that supports caching.
+Caching stores frequently accessed data so that future requests can be served faster.
+A cache can use a time-to-live (TTL) to determine when stored data expires.
+The cache-aside pattern checks the cache before retrieving data from the database or another source.

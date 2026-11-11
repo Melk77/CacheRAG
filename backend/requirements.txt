@@ -1,0 +1,31 @@
+
+# FastAPI application
+fastapi
+uvicorn[standard]
+python-multipart
+
+# Configuration and validation
+pydantic
+pydantic-settings
+email-validator
+
+# PostgreSQL
+sqlalchemy
+psycopg[binary]
+
+# Redis caching
+redis
+
+# Qdrant vector database
+qdrant-client
+
+# Document processing
+PyMuPDF
+
+# HTTP client
+httpx
+
+# Environment variables
+python-dotenv
+
+ddgs==9.16.1

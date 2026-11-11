@@ -1,0 +1,2 @@
+﻿Collection deletion test document.
+This document verifies that deleting a collection also removes its PostgreSQL record, Qdrant vectors, and physical file.
