@@ -70,7 +70,7 @@ def generate_web_answer(question: str) -> dict:
         tools=[
             {"type": "browser_search"}
         ],
-        tool_choice="required",
+        tool_choice="auto",
     )
 
     message = response.choices[0].message
